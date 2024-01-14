@@ -1,5 +1,6 @@
 import 'package:crypto_app/core/Shared/Widgets/Button/PFButton.dart';
 import 'package:crypto_app/core/Shared/Widgets/Textfield/PFTextField.dart';
+import 'package:crypto_app/features/Auth/LogIn/View/LoginView.dart';
 import 'package:flutter/material.dart';
 
 class RegisterView extends StatefulWidget {
@@ -103,6 +104,7 @@ class _RegisterViewState extends State<RegisterView> {
                         // loginBloc.add(LoginRequestedEvent(
                         //     loginRequest: LoginRequest(
                         //         email: email.text, password: password.text)));
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginView()),);
                       },
                       isProcessing:false,
                       //     (state.runtimeType == LoginRequestProcessingState &&
@@ -122,6 +124,7 @@ class _RegisterViewState extends State<RegisterView> {
                           child: TextButton(
                               onPressed: () {
                                 // loginBloc.add(LoginNavigateToRegisterEvent());
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginView()),);
                               },
                               child: const Text(
                                 "Sign In",

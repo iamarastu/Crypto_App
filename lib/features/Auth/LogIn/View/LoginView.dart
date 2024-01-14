@@ -26,7 +26,7 @@ class _LoginViewState extends State<LoginView> {
       buildWhen: (previous, current) => current is! LoginActionState,
       listener: (context, state) async {
         if (state is LoginNavigateToRegisterActionState) {
-         Navigator.push(context, MaterialPageRoute(builder: (context) => const TabsView()),);
+         Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterView()),);
         } else if (state is LoginNavigateToForgetPasswordActionState) {
           Navigator.pushNamed(context, '/forgetPassword');
         } else if (state is LoginNavigateToTabsActionState) {
@@ -96,9 +96,10 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     PFButton(
                       onPressed: () {
-                        loginBloc.add(LoginRequestedEvent(
-                            loginRequest: LoginRequest(
-                                email: email.text, password: password.text)));
+                        // loginBloc.add(LoginRequestedEvent(
+                        //     loginRequest: LoginRequest(
+                        //         email: email.text, password: password.text)));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const TabsView()),);
                       },
                       isProcessing:false,
                       //     (state.runtimeType == LoginRequestProcessingState &&
