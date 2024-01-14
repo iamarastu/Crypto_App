@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
   bloc:
   flutter_bloc:
   flutter_dotenv: ^5.0.2
@@ -75,6 +76,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/images/QR.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
